@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-codingms-djangoblog2-ttcoe77b2iu.ws-eu106.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -45,9 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
+    'crispy_forms', 
+    'crispy_bootstrap5',
     'blog', 
-    'about',
+    'about'
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
