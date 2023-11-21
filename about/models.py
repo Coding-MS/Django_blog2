@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+<<<<<<< HEAD
 
 # Create your models here.
 
@@ -10,6 +11,14 @@ class About(models.Model):
     """
     title = models.CharField(max_length=200)
     profile_image = CloudinaryField('image', default='placeholder')
+=======
+
+
+class About(models.Model):
+    title = models.CharField(max_length=100)
+    profile_image = CloudinaryField('image', default='placeholder')
+    content = models.TextField()
+>>>>>>> b09f1f843828bace240ce443bd30a7eb5ab8ad85
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
 
